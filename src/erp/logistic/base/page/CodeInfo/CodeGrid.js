@@ -38,6 +38,7 @@ function CodeGrid(props) {
     const onCellClicked = params => { //여기서 params는 그리드에서 선택한 한줄의 data
         console.log("datttta🌲",params);
         props.onClick(params.data.divisionCodeNo); //여기서 props는 CodInfo에서 넘겨받은 props이고 props안에 setEdit,onClick가 들어있다.🌲
+        console.log("확인용🌵🌵",params.data.divisionCodeNo)
         if (params.data.codeChangeAvailable === '변경가능') {
             props.setEdit(true);
             setEdit(true);
@@ -113,29 +114,7 @@ function CodeGrid(props) {
                 rowSelection="single"
                 api={codeApi}
             >
-                {/*<Button*/}
-                {/*    variant="contained"*/}
-                {/*    color="secondary"*/}
-                {/*    style={{ marginRight: '1vh' }}*/}
-                {/*    onClick={addClick}*/}
-                {/*>*/}
-                {/*    코드 추가*/}
-                {/*</Button>*/}
-                {/*<Button*/}
-                {/*    variant="contained"*/}
-                {/*    color="secondary"*/}
-                {/*    style={{ marginRight: '1vh' }}*/}
-                {/*    onClick={delClick}*/}
-                {/*>*/}
-                {/*    코드 삭제*/}
-                {/*</Button>*/}
-                {/*<Button variant="contained"*/}
-                {/*    color="secondary"*/}
-                {/*    style={{ marginRight: '1vh' }}*/}
-                {/*    onClick={saveClick}*/}
-                {/*>*/}
-                {/*    저장*/}
-                {/*</Button>*/}
+             
             </MyGrid>
             <MyDialog open={addOpenDialog} close={close}>
                 <div>

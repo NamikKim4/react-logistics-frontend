@@ -12,9 +12,11 @@ import {
 import MyDialog from 'util/LogiUtil/MyDialog';
 import AddDetailCode from './AddDetailCode';
 
-function DetailCodeGrid(props) {
+function DetailCodeGrid(props) { //CodeGrid에서 넘어온 props를 통해 divisionCodeNo을 확인할수있다.
     var divisionCodeNo = props.divisionCodeNo;
-    
+
+    console.log("확인용🌵🌵🌵🌵",divisionCodeNo)
+
     const dispatch = useDispatch();
     // const detailCodeList = useSelector(state => state.RootReducers.logistic.logisticsinfo.detailCodeList);
 
@@ -115,19 +117,9 @@ function DetailCodeGrid(props) {
                     style={{ marginRight: '1vh' }}
                     onClick={onClick}
                 >
-                    코드상세조🌲🌲🌲
+                    코드상세조회🌲🌲🌲
                 </Button>
-                {/*<Button*/}
-                {/*    variant="contained"*/}
-                {/*    color="secondary"*/}
-                {/*    style={{ marginRight: '1vh' }}*/}
-                {/*    onClick={addClick}*/}
-                {/*>*/}
-                {/*    상세코드 추가*/}
-                {/*</Button>*/}
-                {/*<Button type="button" variant="contained" color="secondary" onClick={saveClick}>*/}
-                {/*    상세코드 저장*/}
-                {/*</Button> */}
+
             </MyGrid>
             <MyDialog open={addOpenDialog} close={close}>
                 <div>
